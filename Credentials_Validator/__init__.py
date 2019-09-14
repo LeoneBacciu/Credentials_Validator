@@ -1,2 +1,3 @@
 from .Validators import UsernameValidator, PasswordValidator
-name = 'account_checker'
+
+name = 'Credentials_Validator'
