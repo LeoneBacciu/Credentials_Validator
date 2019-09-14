@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/account_checker.iml" filepath="$PROJECT_DIR$/.idea/account_checker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Credentials_Validator/.idea/Credentials_Validator.iml" filepath="$PROJECT_DIR$/../Credentials_Validator/.idea/Credentials_Validator.iml" />
     </modules>
   </component>
 </project>
