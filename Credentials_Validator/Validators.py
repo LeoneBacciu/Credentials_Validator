@@ -10,7 +10,7 @@ class Validator:
         self.Chars = Chars
         self.nums = nums
         self.symbols = symbols
-        self.symbols_list = kwargs.get('symbols_list', [s for s in '@#$%/£!?'])
+        self.symbols_list = [s for s in kwargs.get('symbols_list', '!"#$%&\'()*+,-./:;<=>?@[\]^_{|}~')]
         self.extra = self.__safe_get(args, 0, {})
 
     @staticmethod
