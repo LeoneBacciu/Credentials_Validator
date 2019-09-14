@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="Credentials_Validator",
-    version="0.0.1",
+    version="0.0.2",
     author="Leone Bacciu",
     author_email="leonebacciu@gmail.com",
     description="Credential validation",

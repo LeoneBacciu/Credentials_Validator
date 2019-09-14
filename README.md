@@ -1,14 +1,14 @@
-#Account credentials checker
+# Account credentials checker
 
 This package takes care of verifing the credentials serverside.
 
-##Download
+## Download
 You can pip install by
 ```commandline
 pip3 install Credentials-Validator
 ```
 
-##Usage
+## Usage
 
 You can import the pakage by typing
 
@@ -39,7 +39,7 @@ The use of range is:
 [0, 0] # denied
 ```
 
-###Validation
+### Validation
 In order to validate a `text` (Username or password) you have to call the method `Validator.verify(text)`\
 It returns two objects:
 1. a `boolean` (`True` if the text is valid, `False` if there is one or more errors)
@@ -72,7 +72,7 @@ print((is_valid, error))
 #returns (False, 'length')
 ```
 
-###Customization
+### Customization
 \
 The default symbols are: `!"#$%&'()*+,-./:;<=>?@[\]^_{|}~`\
 \
