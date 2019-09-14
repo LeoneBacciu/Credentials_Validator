@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="account_checker",
+    name="Credentials_Validator",
     version="0.0.1",
     author="Leone Bacciu",
     author_email="leonebacciu@gmail.com",
