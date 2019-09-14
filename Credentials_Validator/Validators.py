@@ -1,6 +1,6 @@
 class Validator:
 
-    def __init__(self, length, chars, Chars, nums, symbols, *args, **kwargs):
+    def __init__(self, length, chars, Chars, nums, symbols, **kwargs):
 
         self.text = ''
         self.length = length
@@ -11,7 +11,6 @@ class Validator:
         self.nums = nums
         self.symbols = symbols
         self.symbols_list = [s for s in kwargs.get('symbols_list', '!"#$%&\'()*+,-./:;<=>?@[\]^_{|}~')]
-        self.extra = self.__safe_get(args, 0, {})
 
     @staticmethod
     def __safe_get(l, index, default):
@@ -57,15 +56,22 @@ class Validator:
 
 
 class UsernameValidator(Validator):
+    def __init__(self, length, chars, Chars, nums, symbols, **kwargs):
+        super().__init__(length, chars, Chars, nums, symbols, **kwargs)
+        self.django = kwargs.get('django_model', None)
+
     def extra_validation(self, text):
-        model = self.extra.get('django', None)
+        model = self.django
         if model:
             if model.objects.filter(username=text):
                 return False, 'existing'
 
 
 class PasswordValidator(Validator):
+    def __init__(self, length, chars, Chars, nums, symbols, **kwargs):
+        super().__init__(length, chars, Chars, nums, symbols, **kwargs)
+        self.username = kwargs.get('username', None)
 
     def extra_validation(self, text):
-        if text == self.extra.get('username', None):
+        if text == self.username:
             return False, 'equal'

@@ -3,7 +3,7 @@
 This package takes care of verifing the credentials serverside.
 
 ## Download
-You can pip install by
+You can `pip install` by
 ```commandline
 pip3 install Credentials-Validator
 ```
@@ -16,7 +16,7 @@ You can import the pakage by typing
 from Credentials_Validator import UsernameValidator, PasswordValidator
 ```
 \
-The general use is:
+The general usage is:
 
 ```python
 from Credentials_Validator import UsernameValidator
@@ -35,12 +35,12 @@ The use of range is:
 [2, 5] # minimum 2, maximum 5 characters
 [1] # at least one
 [0] # not necessary, not denied
-[0, 4] # not necessary, maximum 5 characters
+[0, 4] # not necessary, maximum 4 characters
 [0, 0] # denied
 ```
 
 ### Validation
-In order to validate a `text` (Username or password) you have to call the method `Validator.verify(text)`\
+In order to validate a `text` (Username or password) you have to call the method `Validator.verify(text)`.\
 It returns two objects:
 1. a `boolean` (`True` if the text is valid, `False` if there is one or more errors)
 2. a `string`, that can be:
@@ -74,9 +74,9 @@ print((is_valid, error))
 
 ### Customization
 \
-The default symbols are: `!"#$%&'()*+,-./:;<=>?@[\]^_{|}~`\
+The default symbols are: `!"#$%&'()*+,-./:;<=>?@[\]^_{|}~`.\
 \
-You can customize the simbols by adding your custom list (string):
+You can customize the simbols by passing your custom list (string) as a keyword argument:
 
 ```python
 from Credentials_Validator import UsernameValidator
