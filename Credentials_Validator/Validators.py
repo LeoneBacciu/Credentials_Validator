@@ -28,7 +28,7 @@ class Validator:
         return False
 
     def extra_validation(self, text):
-        return None
+        raise NotImplementedError('Extra validation not implemented')
 
     def verify(self, text: str):
         self.text = text
@@ -65,6 +65,7 @@ class UsernameValidator(Validator):
         if model:
             if model.objects.filter(username=text):
                 return False, 'existing'
+        return None
 
 
 class PasswordValidator(Validator):
@@ -75,3 +76,4 @@ class PasswordValidator(Validator):
     def extra_validation(self, text):
         if text == self.username:
             return False, 'equal'
+        return None

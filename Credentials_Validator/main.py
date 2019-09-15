@@ -1,6 +1,6 @@
-from Validators import PasswordValidator
+from Validators import Validator
 
-user = PasswordValidator([4, 10], [1], [2], [0], [1], username='PasswOrd!')
+user = Validator([4, 10], [1], [2], [0], [1])
 
 is_valid, error = user.verify('PasswOrd!')
 print((is_valid, error))

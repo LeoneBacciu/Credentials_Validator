@@ -1,3 +1,3 @@
-from .Validators import UsernameValidator, PasswordValidator
+from .Validators import UsernameValidator, PasswordValidator, Validator
 
 name = 'Credentials_Validator'
