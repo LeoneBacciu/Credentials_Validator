@@ -1,7 +1,6 @@
 from Validators import Validator
 
 user = Validator([4, 10], [1], [2], [0], [1])
-
 is_valid, error = user.verify('PasswOrd!')
 print((is_valid, error))
 #returns (True, '')
